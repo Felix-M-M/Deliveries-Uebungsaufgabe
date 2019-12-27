@@ -1,0 +1,9 @@
+<table *ngFor="let delivery of deliveriesData">
+    <tr>
+        <td>{{delivery.carrier}}</td>
+        <td>{{delivery.receiver}}</td>
+        <td>{{delivery.weight}}</td>
+        <td>{{delivery.timestamp | date}}</td>
+        <td>{{delivery.status}}</td>
+    </tr>
+</table>

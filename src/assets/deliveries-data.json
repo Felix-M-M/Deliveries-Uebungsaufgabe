@@ -1,0 +1,46 @@
+{
+	"deliveries": [
+		{
+			"carrier": "Hermes",
+			"receiver": "Mustermann, Max",
+			"weight": 5.6,
+			"timestamp": "2019-07-04T11:39:02+02:00",
+			"status": "Delivered"
+		},
+		{
+			"carrier": "DHL",
+			"receiver": "Beispiel, Peter",
+			"weight": 3.8,
+			"timestamp": "2019-10-22T14:01:34+02:00",
+			"status": "Pending"
+		},
+		{
+			"carrier": "Hermes",
+			"receiver": "Schmidt, Erika",
+			"weight": 1.4,
+			"timestamp": "2019-10-22T17:29:12+02:00",
+			"status": "Waiting"
+		},
+		{
+			"carrier": "Hermes",
+			"receiver": "Example, John",
+			"weight": 12.1,
+			"timestamp": "2019-08-11T16:12:39+02:00",
+			"status": "Delivered"
+		},
+		{
+			"carrier": "DHL",
+			"receiver": "Tüchtig, Theo",
+			"weight": 2.4,
+			"timestamp": "2019-10-22T07:43:21+02:00",
+			"status": "Pending"
+		},
+		{
+			"carrier": "Hermes",
+			"receiver": "Fleißig, Florian",
+			"weight": 7.7,
+			"timestamp": "2018-04-30T19:33:25+02:00",
+			"status": "Delivered"
+		}
+	]
+}
