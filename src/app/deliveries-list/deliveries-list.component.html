@@ -1,9 +1,21 @@
-<table *ngFor="let delivery of deliveriesData">
-    <tr>
-        <td>{{delivery.carrier}}</td>
+<div class="search-bar">
+    <label for="deliverySearch">Filter: </label>
+    <input type="text" id="deliverySearch"/>
+    <button id="searchButton">Suchen</button>
+</div>
+<table class="delivery-table">
+    <tr class="delivery-table-header">
+        <td>Empfänger</td>
+        <td>Lieferung von</td>
+        <td>Gewicht</td>
+        <td>Zeitpunkt</td>
+        <td>Status</td>
+    </tr>
+    <tr *ngFor="let delivery of deliveriesData">
         <td>{{delivery.receiver}}</td>
+        <td>{{delivery.carrier}}</td>
         <td>{{delivery.weight}}</td>
-        <td>{{delivery.timestamp | date}}</td>
+        <td>{{delivery.timestamp | date: 'yyyy-MM-ddThh:mm'}}</td>
         <td>{{delivery.status}}</td>
     </tr>
 </table>

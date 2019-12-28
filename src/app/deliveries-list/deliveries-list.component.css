@@ -1,0 +1,12 @@
+.delivery-table{
+    width: 100%;
+}
+.delivery-table-header {
+    font-weight: bold;
+}
+
+.search-bar input[type="text"]{
+    width: 100%;
+    min-width: 10em;
+    max-width: 20em;
+}
