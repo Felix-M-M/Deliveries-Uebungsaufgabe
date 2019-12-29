@@ -14,9 +14,12 @@ export class DeliveriesListComponent implements OnInit {
   constructor(private deliveriesService: DeliveryService) { }
 
   ngOnInit() {
-    const data: DeliveryInterface[] = this.deliveriesService.getData();
-    console.log(data)
-    this.deliveriesData = data;
+    this.deliveriesData = this.deliveriesService.getData();
+  }
+
+  updateList(searchVal: string) {
+    this.deliveriesData = this.deliveriesService.getData(searchVal);
+    console.log(this.deliveriesData);
   }
 
 }

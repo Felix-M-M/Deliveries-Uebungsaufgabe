@@ -1,8 +1,5 @@
-<div class="search-bar">
-    <label for="deliverySearch">Filter: </label>
-    <input type="text" id="deliverySearch"/>
-    <button id="searchButton">Suchen</button>
-</div>
+<app-search-bar></app-search-bar>
+<!--<input [(ngModel)]="searchText" type="text" placeholder="" #searchInput>-->
 <table class="delivery-table">
     <tr class="delivery-table-header">
         <td>Empfänger</td>
@@ -11,7 +8,7 @@
         <td>Zeitpunkt</td>
         <td>Status</td>
     </tr>
-    <tr *ngFor="let delivery of deliveriesData">
+    <tr *ngFor="let delivery of deliveriesData | filter : searchText">
         <td>{{delivery.receiver}}</td>
         <td>{{delivery.carrier}}</td>
         <td>{{delivery.weight}}</td>

@@ -18,6 +18,12 @@ export class DeliveryService {
   }
 
   getData(searchVal?: string): DeliveryInterface[] {
-    return this.storedDeliveriesData;
+    if(!!searchVal){
+      const filteredData = [];
+
+      return filteredData;
+    }
+    else
+      return this.storedDeliveriesData;
   }
 }
