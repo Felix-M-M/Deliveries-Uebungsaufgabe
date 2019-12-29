@@ -17,9 +17,8 @@ export class DeliveriesListComponent implements OnInit {
     this.deliveriesData = this.deliveriesService.getData();
   }
 
-  updateList(searchVal: string) {
+  onSearchClick(searchVal: string) {
     this.deliveriesData = this.deliveriesService.getData(searchVal);
-    console.log(this.deliveriesData);
   }
 
 }
