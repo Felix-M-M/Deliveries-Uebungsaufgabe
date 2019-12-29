@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DeliveriesListComponent } from './deliveries-list/deliveries-list.component';
 import { DeliveryService } from './services/delivery.service';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,8 +11,7 @@ import { FormsModule } from '@angular/forms';
     DeliveriesListComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule
+    BrowserModule
   ],
   providers: [DeliveryService],
   bootstrap: [AppComponent]
