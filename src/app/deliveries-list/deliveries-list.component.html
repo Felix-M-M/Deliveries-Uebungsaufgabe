@@ -1,21 +1,28 @@
-<div class="search-bar">
-    <label>Filter: </label>
-    <input type="text" placeholder="" #searchInput>
+<div class="delivery-list-component">
+  <div class="search-bar">
+    <label>Suchbegriff: </label>
+    <input type="text" placeholder="" #searchInput [(ngModel)]="searchValue">
     <button (click)="onSearchClick(searchInput.value)">Suchen</button>
-</div>
-<table class="delivery-table">
-    <tr class="delivery-table-header">
-        <td>Empfänger</td>
-        <td>Lieferung von</td>
-        <td>Gewicht</td>
-        <td>Zeitpunkt</td>
-        <td>Status</td>
+    <button (click)="onClearClick()">Clear</button>
+  </div>
+  <h2>Lieferungen</h2>
+  <table class="delivery-table">
+    <tr class="delivery-table-header" >
+      <td>Empfänger</td>
+      <td>Lieferung von</td>
+      <td>Gewicht</td>
+      <td>Zeitpunkt</td>
+      <td>Status</td>
     </tr>
     <tr *ngFor="let delivery of deliveriesData">
-        <td>{{delivery.receiver}}</td>
-        <td>{{delivery.carrier}}</td>
-        <td>{{delivery.weight}}</td>
-        <td>{{delivery.timestamp | date: 'yyyy-MM-ddThh:mm'}}</td>
-        <td>{{delivery.status}}</td>
+      <td>{{delivery.receiver}}</td>
+      <td>{{delivery.carrier}}</td>
+      <td>{{delivery.weight}}</td>
+      <td>{{delivery.timestamp | date: 'yyyy-MM-ddThh:mm'}}</td>
+      <td>{{delivery.status}}</td>
     </tr>
-</table>
+    <tr *ngIf="deliveriesData.length === 0">
+      <td class="no-data-cell" colspan="5" >Keine Suchergebnisse</td>
+    </tr>
+  </table>
+</div>

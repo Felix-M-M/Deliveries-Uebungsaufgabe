@@ -10,15 +10,21 @@ import { DeliveryInterface } from '../interfaces/delivery-interface';
 export class DeliveriesListComponent implements OnInit {
 
   deliveriesData: DeliveryInterface[];
+  searchValue: string;
 
   constructor(private deliveriesService: DeliveryService) { }
 
   ngOnInit() {
-    this.deliveriesData = this.deliveriesService.getData();
+    this.onClearClick();
   }
 
   onSearchClick(searchVal: string) {
-    this.deliveriesData = this.deliveriesService.getData(searchVal);
+    this.deliveriesData = this.deliveriesService.getData(this.searchValue);
+  }
+
+  onClearClick() {
+    this.searchValue = '';
+    this.deliveriesData = this.deliveriesService.getData();
   }
 
 }

@@ -1,6 +1,33 @@
-.delivery-table{
-    width: 100%;
+.delivery-list-component {
+  min-width: 800px;
+  border: solid black;
+  padding: 1em;
 }
-.delivery-table-header {
-    font-weight: bold;
+
+.search-bar * {
+  margin: 0 0.5em 0 0;
+}
+
+.delivery-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.delivery-table tr:first-child {
+  font-weight: bold;
+  border-bottom: 0.2em solid black;
+}
+
+.delivery-table td {
+  width: 20%;
+  padding: 0.2em 1em;
+  border-left: 0.1em solid black;
+}
+
+.delivery-table td:first-child {
+  border-left: none;
+}
+
+.no-data-cell {
+  text-align: center;
 }
