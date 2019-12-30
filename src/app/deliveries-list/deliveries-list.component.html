@@ -1,8 +1,8 @@
 <div class="delivery-list-component">
   <div class="search-bar">
     <label>Suchbegriff: </label>
-    <input type="text" placeholder="" #searchInput [(ngModel)]="searchValue">
-    <button (click)="onSearchClick(searchInput.value)">Suchen</button>
+    <input type="text" placeholder="" [(ngModel)]="searchValue" (keydown.enter)="onSearchClick()">
+    <button (click)="onSearchClick()">Suchen</button>
     <button (click)="onClearClick()">Clear</button>
   </div>
   <h2>Lieferungen</h2>

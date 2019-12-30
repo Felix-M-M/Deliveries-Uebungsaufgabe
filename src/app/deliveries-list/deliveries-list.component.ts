@@ -18,7 +18,7 @@ export class DeliveriesListComponent implements OnInit {
     this.onClearClick();
   }
 
-  onSearchClick(searchVal: string) {
+  onSearchClick() {
     this.deliveriesData = this.deliveriesService.getData(this.searchValue);
   }
 
